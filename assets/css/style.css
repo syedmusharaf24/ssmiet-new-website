@@ -289,10 +289,18 @@ h6 {
   }
 
   .navbar .dropdown .dropdown:hover>ul {
-    left: 105%;
+    left: 102%;
   }
 }
+@media (max-width: 1366px) {
+  .navbar .dropdowns .dropdown ul {
+     left: -110%;
+  }
 
+  .navbar .dropdowns .dropdown:hover>ul {
+    left: -105%;
+  }
+}
 /**
 * Mobile Navigation 
 */
@@ -640,7 +648,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #5fcf80;
+  color: #ed3c0d;
 }
 
 .about .content .learn-more-btn {
@@ -699,9 +707,9 @@ section {
   color: #fff;
 }
 
-.why-us .content h3 {
-  font-weight: 700;
-  font-size: 34px;
+.why-us .content h4 {
+  font-weight: 800;
+  font-size: 45px;
   margin-bottom: 30px;
 }
 
@@ -729,25 +737,31 @@ section {
 
 .why-us .icon-boxes .icon-box {
   text-align: center;
-  background: #fff;
+  background: white;
   padding: 40px 30px;
   width: 100%;
-  border: 1px solid #eef0ef;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-.why-us .icon-boxes .icon-box i {
-  font-size: 32px;
-  padding: 18px;
+.why-us .icon-boxes .icon-box ul i {
+  font-size: 20px;
+  padding-right: 4px;
   color: #5fcf80;
-  margin-bottom: 30px;
-  background: #ecf9f0;
-  border-radius: 50px;
+}
+.why-us .icon-boxes .icon-box img {
+  padding: 18px;
+  margin-bottom: 20px;
+  height: 250px;
+  
 }
 
 .why-us .icon-boxes .icon-box h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin: 0 0 30px 0;
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0 0 20px 0;
+  color: #ed3c0d;
 }
 
 .why-us .icon-boxes .icon-box p {
@@ -765,23 +779,50 @@ section {
 .features .icon-box {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   transition: 0.3s;
-  border: 1px solid #eef0ef;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  height:110px;
+  width:350px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)
 }
 
+.features .iconbox {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: 0.3s;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  height: 120px;
+  width: 120px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)
+}
+
+.features .iconbox img{
+ height:100px;
+ align-items: center;
+ 
+}
 .features .icon-box i {
-  font-size: 32px;
+  font-size: 40px;
   padding-right: 10px;
   line-height: 1;
+}
+
+.features .icon-box img {
+  height: 45px;
+  padding-right: 10px;
 }
 
 .features .icon-box h3 {
   font-weight: 700;
   margin: 0;
   padding: 0;
-  line-height: 1;
-  font-size: 16px;
+  line-height: 1.5;
+  font-size: 20px;
+  margin-left: 10px;
 }
 
 .features .icon-box h3 a {
@@ -790,13 +831,21 @@ section {
 }
 
 .features .icon-box:hover {
-  border-color: #5fcf80;
+  border-color: #e66030;
+  
+}
+.features .iconbox:hover {
+  border-color: #e66030;
+
 }
 
 .features .icon-box:hover h3 a {
-  color: #5fcf80;
+  color: #e66030
 }
 
+.features .icon-box img {
+  height:50px
+}
 /*--------------------------------------------------------------
 # Courses
 --------------------------------------------------------------*/
