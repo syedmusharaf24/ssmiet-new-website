@@ -420,10 +420,10 @@ background:white;
     
 }
 .search-top a {
-  float: left;
-margin-left: 40PX;
+  float: right;
 
-  color: #002147;
+
+  color: #34475c;
   text-align: center;
   padding: 14px 16px ;
   text-decoration: none;
@@ -562,7 +562,7 @@ margin-left: 40PX;
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
-  overflow: hidden;
+
 }
 
 .section-bg {
