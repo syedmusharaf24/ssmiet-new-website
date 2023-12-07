@@ -715,7 +715,15 @@ section {
   font-weight: 700;
   color: #37423b;
 }
+@media (max-width: 767px) {
+  .counts .counters {
+    display: block;
+  }
 
+  .counts .counters .plus-sign {
+    margin-left: 5; /* Adjust the margin as needed for mobile view */
+  }
+}
 /*--------------------------------------------------------------
 # Why Us
 --------------------------------------------------------------*/
