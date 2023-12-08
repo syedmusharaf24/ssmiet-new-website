@@ -117,6 +117,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
+  position: st;
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
@@ -412,25 +413,18 @@ h6 {
 }
 
 /* search bar */
-.search-top{
-background:white;
-    width: 100%;
-  height: 110px;
-
-    
+/* Add this to your existing CSS */
+.search-top {
+  
+  height: 40px;
+  background-color: #fff; 
 }
+
+/* Example styling for the links, you can adjust as needed */
 .search-top a {
-  float: right;
-
-
-  color: #34475c;
-  text-align: center;
-  padding: 14px 16px ;
+  margin-right: 15px;
   text-decoration: none;
-  font-size: 17px;
-  font-weight: 600;
-  margin-top: 15px;
-  padding-left: 15px;
+  color: #333; /* Adjust the color as needed */
 }
 
 /* Change the color of links on hover */
@@ -805,6 +799,12 @@ section {
   height:110px;
   width:350px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1)
+}
+
+@media (max-width: 1200px) {
+  .features .icon-box {
+    width: 100%;  /* Adjust width for screens below 1200px */
+  }
 }
 
 .features .iconbox {
