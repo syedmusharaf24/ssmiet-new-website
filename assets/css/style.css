@@ -1603,19 +1603,20 @@ section {
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #f9faf9;
+  background: #002147;
 }
 
 #footer .footer-top .footer-contact {
   margin-bottom: 30px;
 }
 
-#footer .footer-top .footer-contact h4 {
+#footer .footer-top .footer-contact h3 {
   font-size: 22px;
   margin: 0 0 30px 0;
   padding: 2px 0 2px 0;
   line-height: 1;
   font-weight: 700;
+  color: #fff;
 }
 
 #footer .footer-top .footer-contact p {
@@ -1623,13 +1624,13 @@ section {
   line-height: 24px;
   margin-bottom: 0;
   font-family: "Raleway", sans-serif;
-  color: #777777;
+  color: white;
 }
 
 #footer .footer-top h4 {
   font-size: 16px;
   font-weight: bold;
-  color: #444444;
+  color: #fff;
   position: relative;
   padding-bottom: 12px;
 }
@@ -1646,7 +1647,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #5fcf80;
+  color: grey;
   font-size: 18px;
   line-height: 1;
 }
@@ -1670,7 +1671,7 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #5fcf80;
+  color: white;
 }
 
 #footer .footer-newsletter {
@@ -1727,18 +1728,19 @@ section {
 }
 
 #footer .credits a {
-  color: #3ac162;
+  color: #002147;
   transition: 0.3s;
+  font-weight: 600;
 }
 
 #footer .credits a:hover {
-  color: #5fcf80;
+  color: #ed3c0d;
 }
 
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #5fcf80;
+  background: #5a6c60;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1751,7 +1753,7 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: #3ac162;
+  background: #e66030;
   color: #fff;
   text-decoration: none;
 }
