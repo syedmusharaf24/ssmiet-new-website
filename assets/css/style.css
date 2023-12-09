@@ -85,7 +85,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #5fcf80;
+  border: 6px solid #ed3c0d;
   border-top-color: #fff;
   border-bottom-color: #fff;
   border-radius: 50%;
@@ -117,7 +117,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  position: st;
+  position: sticky;
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
@@ -143,6 +143,24 @@ h6 {
 #header .logo img {
   max-height: 60px;
 }
+
+.header-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.second-line {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.second-line span {
+  margin-right: 15px; /* Adjust the spacing between items as needed */
+  color: #fff; /* Adjust the color as needed */
+}
+
 
 /**
 * Get Startet Button 
@@ -415,9 +433,8 @@ h6 {
 /* search bar */
 /* Add this to your existing CSS */
 .search-top {
-  
   height: 40px;
-  background-color: #fff; 
+  background-color: #fff;
 }
 
 /* Example styling for the links, you can adjust as needed */
@@ -439,29 +456,52 @@ h6 {
   color: white;
 }
 
-.con-title{
+/* Responsive styles - hide on small screens, visible on medium and larger screens */
+@media (max-width: 767px) {
+  .search-top {
+    display: none; /* Hide on small screens */
+  }
+}
+
+@media (min-width: 768px) {
+  .search-top {
+    display: flex; /* Make visible on medium and larger screens */
+    align-items: center;
+  }
+}
+
+
+.college h1 {
   text-align: center;
-  
+  color: #ed3c0d;
+  font-weight: 700;
 }
-.con-title h2{
-  font-size: 36px;
-  margin-top: 0px;
 
-  line-height: 40px;
-}
-.con-title h2 span{
-  font-size: 36px;
-  font-weight:700;
-  color: #f26838;
-  line-height: 40px;
-}
-.con-title p{
+.college h2 {
   font-size: 18px;
-  color: #3f444a;
-  font-weight: 300;
+  color: #002147;
+  font-weight: 500;
+  text-align: center;
 }
 
-/* Add a black background color to the top navigation */
+.college h3 {
+  font-size: 18px;
+  color: #002147;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .college h1 {
+    font-size: 24px; /* Adjust the font size for smaller screens */
+  }
+
+  .college h2,
+  .college h3 {
+    font-size: 16px; /* Adjust the font size for smaller screens */
+  }
+}
 
 
 /*--------------------------------------------------------------
