@@ -708,6 +708,19 @@ section {
   }
 }
 
+.welcome-heading {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center; /* Center the text */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .welcome-heading {
+    font-size: 28px; /* Adjust the font size for smaller screens */
+  }
+}
+
 /*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
