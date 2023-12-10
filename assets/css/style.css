@@ -641,9 +641,10 @@ section {
 .breadcrumbs {
   margin-top: 73px;
   text-align: center;
-  background: #5fcf80;
+  background: #002147;
   padding: 30px 0;
   color: #fff;
+  
 }
 
 @media (max-width: 992px) {
@@ -654,7 +655,7 @@ section {
 
 .breadcrumbs h2 {
   font-size: 32px;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .breadcrumbs p {
@@ -1756,4 +1757,88 @@ section {
   background: #e66030;
   color: #fff;
   text-decoration: none;
+}
+
+section.container {
+  display: flex;
+  flex-direction: column;
+}
+
+div.c {
+  position: relative;
+  margin: 10px;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: 0;
+}
+
+h1 {
+  background: #002147;
+  color: white;
+  padding: 10px;
+  position: relative;
+  z-index: 1;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+label {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+ margin-left: 10px;
+ padding-right: 10px;
+}
+
+i {
+ 
+  font-size: 25px;
+ transition: ease-in;
+}
+
+input:checked ~ h1 label i{
+  transform: rotate(90deg); /* Rotate the label when the checkbox is checked */
+}
+div.p {
+  overflow: hidden;
+}
+
+div.p .content {
+  display: none; /* Hide content by default */
+  padding: 10px; /* Add padding to the content for better spacing */
+}
+
+div.p table{
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+
+
+div.p h3,
+div.p p {
+  margin: 0;
+}
+
+input:checked ~ .p .content {
+  display: block; /* Show content when checkbox is checked */
 }
