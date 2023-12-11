@@ -1842,3 +1842,4 @@ div.p p {
 input:checked ~ .p .content {
   display: block; /* Show content when checkbox is checked */
 }
+
