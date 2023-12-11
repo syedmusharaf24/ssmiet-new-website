@@ -1779,7 +1779,7 @@ input[type="checkbox"] {
   visibility: 0;
 }
 
-h1 {
+div.c h1 {
   background: #002147;
   color: white;
   padding: 10px;
