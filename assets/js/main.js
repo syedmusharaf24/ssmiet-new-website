@@ -134,9 +134,27 @@
 
 })()
 
-function toggleAll(expand) {
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  checkboxes.forEach((checkbox) => {
-    checkbox.checked = expand;
+function expandAll() {
+  // Get all accordion items and trigger their collapse show
+  var accordionItems = document.querySelectorAll('.custom-accordion-item');
+  accordionItems.forEach(function(item) {
+    var collapseElement = item.querySelector('.accordion-collapse');
+    if (collapseElement) {
+      var accordion = new bootstrap.Collapse(collapseElement, { toggle: true });
+      accordion.show();
+    }
   });
 }
+
+function collapseAll() {
+  // Get all accordion items and trigger their collapse hide
+  var accordionItems = document.querySelectorAll('.custom-accordion-item');
+  accordionItems.forEach(function(item) {
+    var collapseElement = item.querySelector('.accordion-collapse');
+    if (collapseElement) {
+      var accordion = new bootstrap.Collapse(collapseElement, { toggle: true });
+      accordion.hide();
+    }
+  });
+}
+

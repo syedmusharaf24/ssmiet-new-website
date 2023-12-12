@@ -1812,9 +1812,17 @@ div.p {
   overflow: hidden;
 }
 
+div.c.expanded .p .content {
+  display: block;
+}
 div.p .content {
   display: none; /* Hide content by default */
   padding: 10px; /* Add padding to the content for better spacing */
+}
+
+div.p .content a {
+  pointer-events: auto;
+  z-index: 3;
 }
 
 div.p table{
@@ -1843,3 +1851,245 @@ input:checked ~ .p .content {
   display: block; /* Show content when checkbox is checked */
 }
 
+
+.faculty-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faculty-card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+
+
+.faculty-name {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #002147;
+}
+
+.faculty-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px auto;
+}
+
+.Designation{
+  color: #37423b;
+}
+
+/* Responsive Layout */
+@media (min-width: 1200px) {
+  .faculty-card {
+    width: calc(25% - 20px);
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .faculty-card {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .faculty-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 767px) {
+  .faculty-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .faculty-card {
+    width: calc(100% - 20px);
+  }
+}
+
+/* Custom Bootstrap 5 Accordion Styles */
+.custom-accordion {
+  --bs-accordion-color: var(--bs-body-color);
+  --bs-accordion-bg: var(--bs-body-bg);
+  --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+  --bs-accordion-border-color: var(--bs-border-color);
+  --bs-accordion-border-width: var(--bs-border-width);
+  --bs-accordion-border-radius: var(--bs-border-radius);
+  --bs-accordion-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+  --bs-accordion-btn-padding-x: 1.25rem;
+  --bs-accordion-btn-padding-y: 1rem;
+  --bs-accordion-btn-color: var(--bs-body-color);
+  --bs-accordion-btn-bg: var(--bs-accordion-bg);
+  
+  --bs-accordion-btn-icon-width: 1.25rem;
+  --bs-accordion-btn-icon-transform: rotate(-180deg);
+  --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+ 
+  --bs-accordion-btn-focus-border-color: #86b7fe;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  --bs-accordion-body-padding-x: 1.25rem;
+  --bs-accordion-body-padding-y: 1rem;
+  --bs-accordion-active-color: var(--bs-primary-text-emphasis);
+  --bs-accordion-active-bg: var(--bs-primary-bg-subtle);
+}
+
+.custom-accordion-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+  font-size: 1rem;
+  color: var(--bs-accordion-btn-color);
+  text-align: left;
+  background-color:#002147;
+  border-radius:0;
+  overflow-anchor: none;
+  transition: var(--bs-accordion-transition);
+  color: white;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-accordion-button {
+    transition: none;
+  }
+}
+
+.custom-accordion-button i{
+  transition: ease-in;
+  font-size: 25px;
+}
+
+.custom-accordion-button:after i{
+  transform: rotate(90deg);
+}
+
+.custom-accordion-button:not(.collapsed) {
+  color: var(--bs-accordion-active-color);
+  background-color: #002147;
+  color: white;
+}
+/* ... (previous CSS code) */
+
+.custom-accordion-button:not(.collapsed) i.bx::before {
+  transform: rotate(90deg);
+}
+
+/* ... (remaining CSS code) */
+
+
+.custom-accordion-button::after {
+  flex-shrink: 0;
+  width: var(--bs-accordion-btn-icon-width);
+  height: var(--bs-accordion-btn-icon-width);
+  margin-left: auto;
+  content: "";
+  background-image: var(--bs-accordion-btn-icon);
+  background-repeat: no-repeat;
+  background-size: var(--bs-accordion-btn-icon-width);
+  transition: var(--bs-accordion-btn-icon-transition);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .custom-accordion-button::after {
+    transition: none;
+  }
+}
+
+.custom-accordion-button:hover {
+  z-index: 2;
+}
+
+.custom-accordion-button:focus {
+  z-index: 3;
+  outline: 0;
+  
+}
+
+.custom-accordion-header {
+  margin-bottom: 0;
+
+}
+
+.custom-accordion-item {
+  color: var(--bs-accordion-color);
+  background-color: var(--bs-accordion-bg);
+  border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+  margin-bottom: 20px;
+}
+
+.custom-accordion-item:first-of-type {
+  border-top-left-radius: var(--bs-accordion-border-radius);
+  border-top-right-radius: var(--bs-accordion-border-radius);
+}
+
+.custom-accordion-item:first-of-type .custom-accordion-button {
+  border-top-left-radius: var(--bs-accordion-inner-border-radius);
+  border-top-right-radius: var(--bs-accordion-inner-border-radius);
+}
+
+.custom-accordion-item:not(:first-of-type) {
+  border-top: 0;
+}
+
+.custom-accordion-item:last-of-type {
+  border-bottom-right-radius: var(--bs-accordion-border-radius);
+  border-bottom-left-radius: var(--bs-accordion-border-radius);
+}
+
+.custom-accordion-item:last-of-type .custom-accordion-button.collapsed {
+  border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
+  border-bottom-left-radius: var(--bs-accordion-inner-border-radius);
+}
+
+.custom-accordion-item:last-of-type .accordion-collapse {
+  border-bottom-right-radius: var(--bs-accordion-border-radius);
+  border-bottom-left-radius: var(--bs-accordion-border-radius);
+}
+
+.custom-accordion-body {
+  padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
+
+}
+
+.custom-accordion-body table{
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.custom-accordion-flush .accordion-collapse {
+  border-width: 0;
+}
+
+.custom-accordion-flush .custom-accordion-item {
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+
+.custom-accordion-flush .custom-accordion-item:first-child {
+  border-top: 0
+}
